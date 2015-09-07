@@ -13,25 +13,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <deltaspike.version>1.5.0</deltaspike.version>
         <tomee-api.version>6.0-5</tomee-api.version>
-
-        <hibernate.version>4.0.1.Final</hibernate.version>
         <hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
+        <hibernate.version>4.0.1.Final</hibernate.version>
         <jboss-transaction-api_1.1_spec.version>1.0.0.Final</jboss-transaction-api_1.1_spec.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.openejb</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>${tomee-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
-            <version>${hibernate-jpa-2.0-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.transaction</groupId>
             <artifactId>jboss-transaction-api_1.1_spec</artifactId>
@@ -39,6 +26,31 @@
             <scope>provided</scope>
         </dependency>
 
+        <!--Java EE Api-->
+        <dependency>
+            <groupId>org.apache.openejb</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${tomee-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--Hibernate-->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>${hibernate-jpa-2.0-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 
         <!--DeltaSpike Core-->
         <dependency>
@@ -80,18 +92,6 @@
             <artifactId>deltaspike-data-module-impl</artifactId>
             <version>${deltaspike.version}</version>
             <scope>runtime</scope>
-        </dependency>
-
-        <!--Hibernate-->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
         </dependency>
 
         <!--Log4j dependencies-->
