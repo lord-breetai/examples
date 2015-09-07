@@ -1,9 +1,5 @@
 package org.alfac.examples.phonebook.config.persistence;
 
-/**
- * @author ivan.
- */
-
 import javax.annotation.Resource;
 import javax.annotation.sql.DataSourceDefinition;
 import javax.inject.Named;
@@ -20,7 +16,6 @@ import javax.sql.DataSource;
         user = "sa",
         password = ""
 )
-
 @Named
 public class PhonebookDS {
 
